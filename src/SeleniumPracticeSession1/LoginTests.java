@@ -46,7 +46,19 @@ public class LoginTests {
 
         WebElement btnLogin3 = driver3.findElement(By.name("submit"));
         btnLogin3.click();
+        
+        WebDriver driver4 = new ChromeDriver();
+        driver4.manage().window().maximize();
+        driver4.get("http://stock.scriptinglogic.org/");
 
+        WebElement txtUsername4 = driver4.findElement(By.id("login-username"));
+        txtUsername4.sendKeys("");
+
+        WebElement txtPassword4 = driver4.findElement(By.id("login-password"));
+        txtPassword4.sendKeys("");
+
+        WebElement btnLogin4 = driver4.findElement(By.name("submit"));
+        btnLogin4.click();
         driver.close();
 
     }
